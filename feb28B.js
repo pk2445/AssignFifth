@@ -66,6 +66,11 @@
 		 */
 		var myDataTable = google.visualization.arrayToDataTable(myDataBank);
 		
+		/* This title that I put in the js file is not apprearing but the one that I put in the html file under h1 ND h2 is appearing 
+		 * with the chart.... I don't know why
+		 * 
+		 */
+		
 		var options = {title: 'Umemployment worse in 20 years'};
 		
 	};
