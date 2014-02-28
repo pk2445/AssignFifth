@@ -43,26 +43,42 @@
 		 */
 		
 		
-	for (var i = 300; i < myDataStore.length; i++) {
+	for (var i = 350; i < myDataStore.length; i++) {
 		
 		var newData = myDataStore[i];
+		/* I am telling the computer that of the many variables that I have in my json, I only need date and value and that 
+		 * should appear in the order the date should come in the X-axis and value should come in the Y-axis.
+		 * 
+		 */
 		var newArray = [newData.date, Number(newData.value)];
+		
+		/* This is the command to put my Data Array into my data list 
+		 * 
+		 */
+		
 		myDataBank.push(newArray);
 		
+		console.log("myDataBank");
 		
 		
+		/*This is google array to data table by putting the name of the function and data list
+		 * 
+		 */
 		var myDataTable = google.visualization.arrayToDataTable(myDataBank);
 		
-		var options = {title: "Umemployment worse in 20 years"};
+		var options = {title: 'Umemployment worse in 20 years'};
 		
 	};
 
+	/* this is the google visualization line chart command 
+	 * 
+	 */
 	var myNewChart = new google.visualization.LineChart(document.getElementById("dataBankDiv"));
 	myNewChart.draw(myDataTable);
 	
 	
 	console.log("Load the page");
-	console.log(myDataBank);
+	
 }
 
 
